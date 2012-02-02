@@ -21,7 +21,7 @@
         <dependency>
             <groupId>org.antlr</groupId>
             <artifactId>antlr</artifactId>
-            <version>1.4.3</version>
+            <version>3.4</version>
             <type>jar</type>
             <optional>false</optional>
         </dependency>
@@ -51,4 +51,10 @@
             </plugin>
         </plugins>
     </build>
+
+    <scm>
+        <url>https://github.com/fhermeni/configChecker</url>
+        <connection>scm:git:git@github.com:fhermeni/configChecker.git</connection>
+        <developerConnection>scm:git:git@github.com:fhermeni/configChecker.git</developerConnection>
+    </scm>
 </project>
