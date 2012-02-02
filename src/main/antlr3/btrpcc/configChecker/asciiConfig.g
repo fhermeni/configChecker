@@ -1,4 +1,21 @@
-grammar asciiConfig;
+grammar AsciiConfig;
+
+options {
+	language = Java;
+	output = AST;
+}
+
+
+@parser::header {
+package btrpcc.configChecker;
+	
+}
+
+@lexer::header {
+package btrpcc.configChecker;
+
+
+}
 
 ID  :	('a'..'z'|'A'..'Z') ('a'..'z'|'A'..'Z'|'0'..'9')*;
 
@@ -13,7 +30,7 @@ node_decl
 elem_off:	'(' ID ')';
 node_on	:	ID ':' vm*;
 
-vm	:	vm_run |Êvm_paused|vm_sleep;
+vm	:	vm_run |vm_paused|elem_off;
 vm_run	:	ID;
 vm_paused
 	:	'!' ID;
