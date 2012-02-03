@@ -1,52 +1,18 @@
 package btrpcc.configChecker;
 
-import org.antlr.runtime.*;
-
 import java.io.File;
 import java.io.IOException;
 
 /**
- * Main class to check the conformance of a serie of files to the configuration
- * EBNF in the BtrPlace constraint catalog
+ * Main class to interact with the checker from the command line.
  *
  * @author Fabien Hermenier
  */
-public class ConfigChecker {
-
-    private static final ConfigChecker instance = new ConfigChecker();
+public class CCLauncher {
 
     private static final String HELP_FLAG = "-h";
 
     private static final String VERBOSE_FLAG = "-v";
-
-    private ConfigChecker() {
-    }
-
-    public boolean check(File f) throws IOException {
-        return check(new ANTLRFileStream(f.getAbsolutePath()));
-    }
-
-    public boolean check(String str) {
-        return check(new ANTLRStringStream(str));
-    }
-
-
-    private boolean check(CharStream cs) {
-        AsciiConfigLexer l = new AsciiConfigLexer(cs);
-        CommonTokenStream s = new CommonTokenStream(l);
-        AsciiConfigParser p = new AsciiConfigParser(s);
-        try {
-            p.configuration();
-        } catch (RecognitionException e) {
-            System.out.println(e.getMessage());
-            return false;
-        }
-        return true;
-    }
-
-    public static ConfigChecker getInstance() {
-        return instance;
-    }
 
     private static void usage() {
         System.out.println("Usage: configChecker input_files");
@@ -73,7 +39,7 @@ public class ConfigChecker {
                 verbose = true;
             } else { //Supposed to be a file
                 try {
-                    boolean myRet = ConfigChecker.getInstance().check(new File(arg));
+                    boolean myRet = ANTLRAsciiConfigChecker.getInstance().check(new File(arg));
                     ret &= myRet;
                     if (verbose) {
                         System.out.println(arg + " : " + (myRet ? "valid" : "invalid"));
