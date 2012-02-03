@@ -44,7 +44,7 @@ public class ANTLRAsciiConfigChecker implements AsciiConfigChecker {
         try {
             AsciiConfigParser.configuration_return ret = p.configuration();
             if (ret.errors != null && !ret.errors.isEmpty()) {
-                StringBuffer buf = new StringBuffer(ret.errors.size());
+                StringBuilder buf = new StringBuilder(ret.errors.size());
                 for (Iterator<String> ite = ret.errors.iterator(); ite.hasNext(); ) {
                     buf.append(ite.next());
                     if (ite.hasNext()) {
