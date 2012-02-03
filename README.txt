@@ -45,6 +45,8 @@ The following EBNF specifies the format of a configuration:
     vm	:	ON_ID | OFF_ID | PAUSED_ID;
 
 
+In addition, every identifier in a same configuration are supposed to be unique.
+
 Copyright
 -------------------------------
 Copyright (c) 2011 INRIA.
