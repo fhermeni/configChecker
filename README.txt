@@ -18,6 +18,12 @@ Usage
 
     configChecker$ ./cchecker
 
+    Usage: configChecker input_files
+    Check the conformance of each of the given files to the configuration EBNF
+    By default, the program returns 0 if all of the given files are well formed
+    Flags:
+    -v: print version
+    -h: print this help
 
 Configuration format
 -------------------------------
