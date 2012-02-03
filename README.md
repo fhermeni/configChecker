@@ -29,8 +29,19 @@ Code organization
 * src - source files
 * target - output directory
 
+Branching model
+------------------------------
 
-Copyrigth 
+This repository use [this branching model](http://nvie.com/posts/a-successful-git-branching-model/). In practice
+
+* the _master_ branch is dedicated to _production-ready_ code
+* the _develop_ branch is the _integration_ branch for the next release
+
+O ther branches may either be dedicated to _feature_ branches, _release_ branches, or _hotfix_ branches. _feature_ branches branch off from the _develop_ branch. _release_ branches prepare the next release from the _develop_ branch while _hotfix_ branches applied critical fixes for the _master_ branch.
+
+
+
+Copyright 
 -------------------------------
 
 Copyright 2012 INRIA, Inc.
