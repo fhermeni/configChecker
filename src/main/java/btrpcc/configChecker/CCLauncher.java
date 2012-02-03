@@ -37,15 +37,15 @@ public class CCLauncher {
                 System.exit(0);
             } else if (arg.equals(VERBOSE_FLAG)) {
                 verbose = true;
-            } else { //Supposed to be a file
+            } else {
                 try {
-                    boolean myRet = ANTLRAsciiConfigChecker.getInstance().check(new File(arg));
-                    ret &= myRet;
-                    if (verbose) {
-                        System.out.println(arg + " : " + (myRet ? "valid" : "invalid"));
-                    }
+                    ANTLRAsciiConfigChecker.getInstance().check(new File(arg));
                 } catch (IOException e) {
                     System.out.println(arg + " : " + e.getMessage());
+                    ret = false;
+                } catch (ConformanceException e) {
+                    System.out.println(arg + " : " + e.getMessage());
+                    ret = false;
                 }
             }
         }

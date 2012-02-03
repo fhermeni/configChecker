@@ -15,25 +15,25 @@ public interface AsciiConfigChecker {
      * Check whether the file is well-formed or not.
      *
      * @param f the file to check
-     * @return {@code true} if the file' content is well-formed. {@code false} otherwise
-     * @throws IOException if an error occurred while reading the file.
+     * @throws IOException          if an error occurred while reading the file.
+     * @throws ConformanceException if the configuration is not well-formed
      */
-    boolean check(File f) throws IOException;
+    void check(File f) throws IOException, ConformanceException;
 
     /**
      * Check whether the string is well-formed or not.
      *
      * @param str the str to check
-     * @return {@code true} if the string is well-formed. {@code false} otherwise
+     * @throws ConformanceException if the configuration is not well-formed
      */
-    boolean check(String str);
+    void check(String str) throws ConformanceException;
 
     /**
      * Check whether the stream content is well-formed or not.
      *
      * @param r the stream to check
-     * @return {@code true} if the stream content is well-formed. {@code false} otherwise
-     * @throws IOException if an error occurred while reading the stream.
+     * @throws IOException          if an error occurred while reading the stream.
+     * @throws ConformanceException if the configuration is not well-formed
      */
-    boolean check(Reader r) throws IOException;
+    void check(Reader r) throws ConformanceException, IOException;
 }
