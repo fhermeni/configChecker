@@ -3,7 +3,7 @@ Configuration Checker
 This tools helps at checking for the conformance of configuration
 with regards to its specification in the BtrPlace constraint catalog.
 
-Version: 1.0-SNAPSHOT
+Version: 0.5
 author: Fabien Hermenier
 contact: fabien.hermenier@inria.fr
 
