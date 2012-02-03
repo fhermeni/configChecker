@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assembly>
+    <id>distribution</id>
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+    <dependencySets>
+        <dependencySet>
+            <includes/>
+            <outputDirectory>jar</outputDirectory>
+        </dependencySet>
+    </dependencySets>
+    <files>
+        <file>
+            <source>README.txt</source>
+            <outputDirectory>/</outputDirectory>
+        </file>
+        <file>
+            <source>src/main/bin/cchecker</source>
+            <outputDirectory>/</outputDirectory>
+            <fileMode>0755</fileMode>
+        </file>
+    </files>
+</assembly>

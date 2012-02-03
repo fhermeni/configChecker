@@ -1,0 +1,10 @@
+#!/bin/sh
+ROOT=`dirname $0`
+#Define the classpath
+JARS=`ls $ROOT/jar/*.jar`
+
+for JAR in $JARS; do
+ CLASSPATH=$JAR:$CLASSPATH
+done
+
+java $JAVA_OPTS -cp $CLASSPATH btrpcc.configChecker.CCLauncher $*
