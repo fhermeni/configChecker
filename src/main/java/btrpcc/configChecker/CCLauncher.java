@@ -16,6 +16,9 @@ public class CCLauncher {
 
     private static final String VERSION = "configChecker v1.0";
 
+    /**
+     * Print the cli usage.
+     */
     private static void usage() {
         System.out.println("Usage: configChecker input_files");
         System.out.println("Check the conformance of each of the given files to the configuration EBNF");
@@ -40,13 +43,14 @@ public class CCLauncher {
                 System.out.println(VERSION);
                 System.exit(0);
             } else {
+                //Other arguments are supposed to be files
                 try {
                     ANTLRAsciiConfigChecker.getInstance().check(new File(arg));
                 } catch (IOException e) {
-                    System.out.println(arg + " : " + e.getMessage());
+                    System.out.println(arg + " :\n" + e.getMessage());
                     ret = false;
                 } catch (ConformanceException e) {
-                    System.out.println(arg + " : " + e.getMessage());
+                    System.out.println(arg + " :\n" + e.getMessage());
                     ret = false;
                 }
             }

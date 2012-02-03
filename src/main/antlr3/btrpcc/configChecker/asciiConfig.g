@@ -28,17 +28,19 @@ options {
 
     public void displayRecognitionError(String[] tokenNames,
                                         RecognitionException e) {
-        String hdr = getErrorHeader(e);
-        String msg = getErrorMessage(e, tokenNames);
-        errors.add(hdr + " " + msg);
+        StringBuilder buf = new StringBuilder("line ").append(e.token.getLine()).append(':')
+        	  .append(e.token.getCharPositionInLine()).append(" - ")
+        	  .append(getErrorMessage(e, tokenNames));
+        errors.add(buf.toString());
     }
+    
     public List<String> getErrors() {
         return errors;
     }
     
         public void checkForDuplicate(Token t) {
     	if (!ids.add(t.getText())) {
-    		errors.add(new StringBuilder("line").append(t.getLine()).append(':')
+    		errors.add(new StringBuilder("line ").append(t.getLine()).append(':')
     		.append(t.getCharPositionInLine()).append(" - identifier '").append(t.getText()).append("' already used").toString());
 	}
     }
