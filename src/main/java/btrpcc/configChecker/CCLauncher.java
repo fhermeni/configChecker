@@ -12,20 +12,21 @@ public class CCLauncher {
 
     private static final String HELP_FLAG = "-h";
 
-    private static final String VERBOSE_FLAG = "-v";
+    private static final String VERSION_FLAG = "-v";
+
+    private static final String VERSION = "configChecker v1.0";
 
     private static void usage() {
         System.out.println("Usage: configChecker input_files");
         System.out.println("Check the conformance of each of the given files to the configuration EBNF");
         System.out.println("By default, the program returns 0 if all of the given files are well formed");
         System.out.println("Flags:");
-        System.out.println("-v: verbose mode");
+        System.out.println("-v: print version");
         System.out.println("-h: print this help");
     }
 
     public static void main(String[] args) {
 
-        boolean verbose = false;
         boolean ret = true;
         if (args.length == 0) {
             usage();
@@ -35,8 +36,9 @@ public class CCLauncher {
             if (arg.equals(HELP_FLAG)) {
                 usage();
                 System.exit(0);
-            } else if (arg.equals(VERBOSE_FLAG)) {
-                verbose = true;
+            } else if (arg.equals(VERSION_FLAG)) {
+                System.out.println(VERSION);
+                System.exit(0);
             } else {
                 try {
                     ANTLRAsciiConfigChecker.getInstance().check(new File(arg));
