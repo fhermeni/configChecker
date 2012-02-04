@@ -37,8 +37,9 @@ This repository use [this branching model](http://nvie.com/posts/a-successful-gi
 * the _master_ branch is dedicated to _production-ready_ code
 * the _develop_ branch is the _integration_ branch for the next release
 
-O ther branches may either be dedicated to _feature_ branches, _release_ branches, or _hotfix_ branches. _feature_ branches branch off from the _develop_ branch. _release_ branches prepare the next release from the _develop_ branch while _hotfix_ branches applied critical fixes for the _master_ branch.
+Other branches may either be either typed as _feature_ branches, _release_ branches, or _hotfix_ branches. _feature_ branches branch off from the _develop_ branch. They bring the new material to the application. _release_ branches branch from the _develop_ branch to prepare the next release. At this step, it is a quick branching to prepare a few files for the next version. Typically, updating the versions hard-coded in some files. _release_ branches are merged with the _develop_ branch and the _master_ branch. Finally, _hotfix_ branches appliced critical fixes for the _master_ branch. 
 
+All the tags are performed directly on the _master_ branch.
 
 
 Copyright 
