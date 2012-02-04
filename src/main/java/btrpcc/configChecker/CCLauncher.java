@@ -14,7 +14,7 @@ public class CCLauncher {
 
     private static final String VERSION_FLAG = "-v";
 
-    private static final String VERSION = "configChecker v0.5";
+    private static final String VERSION = "configChecker v0.6";
 
     /**
      * Print the cli usage.

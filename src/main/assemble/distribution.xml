@@ -12,7 +12,7 @@
     </dependencySets>
     <files>
         <file>
-            <source>README.txt</source>
+            <source>src/main/doc/README.txt</source>
             <outputDirectory>/</outputDirectory>
         </file>
         <file>
