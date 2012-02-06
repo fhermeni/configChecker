@@ -7,6 +7,10 @@ package btrpcc.configChecker;
  */
 public class ConformanceException extends Exception {
 
+    /**
+     * New exception.
+     * @param message the error message to report
+     */
     public ConformanceException(String message) {
         super(message);
     }

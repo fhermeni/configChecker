@@ -14,6 +14,9 @@ import java.util.Iterator;
  */
 public class ANTLRAsciiConfigChecker implements AsciiConfigChecker {
 
+    /**
+     * The unique instance of the checker.
+     */
     private static final AsciiConfigChecker instance = new ANTLRAsciiConfigChecker();
 
     /**

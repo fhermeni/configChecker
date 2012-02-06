@@ -14,7 +14,7 @@ import java.security.Permission;
 @Test
 public class CCLauncherTest {
 
-    protected static class ExitException extends SecurityException {
+    static class ExitException extends SecurityException {
         public final int status;
 
         public ExitException(int status) {

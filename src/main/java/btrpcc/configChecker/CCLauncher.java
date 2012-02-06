@@ -14,7 +14,7 @@ public class CCLauncher {
 
     private static final String VERSION_FLAG = "-v";
 
-    private static final String VERSION = "configChecker v0.6";
+    private static final String VERSION = "configChecker v1.0";
 
     /**
      * Print the cli usage.
@@ -22,8 +22,8 @@ public class CCLauncher {
     private static void usage() {
         System.out.println("Usage: configChecker input_files");
         System.out.println("Check the conformance of each of the given files to the configuration EBNF");
-        System.out.println("By default, the program returns 0 if all of the given files are well formed");
-        System.out.println("Flags:");
+        System.out.println("Returns 0 if all of the given files are well formed");
+        System.out.println("Optional flags:");
         System.out.println("-v: print version");
         System.out.println("-h: print this help");
     }

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.Reader;
 
 /**
- * Interface for a text-based configuration checked.
+ * Interface for a text-based configuration conformance checker.
  *
  * @author Fabien Hermenier
  */
