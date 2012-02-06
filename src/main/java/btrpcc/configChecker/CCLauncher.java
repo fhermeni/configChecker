@@ -1,3 +1,21 @@
+/*
+ * Copyright (c) INRIA 2012
+ * This file is part of configChecker.
+ *
+ *     configChecker is free software: you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation, either version 3 of the License, or
+ *     (at your option) any later version.
+ *
+ *     ConfigChecker is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *     GNU General Public License for more details.
+ *
+ *     You should have received a copy of the GNU General Public License
+ *     along with Foobar.  If not, see <http://www.gnu.org/licenses/>
+ */
+
 package btrpcc.configChecker;
 
 import java.io.File;
@@ -22,8 +40,8 @@ public class CCLauncher {
     private static void usage() {
         System.out.println("Usage: configChecker input_files");
         System.out.println("Check the conformance of each of the given files to the configuration EBNF");
-        System.out.println("By default, the program returns 0 if all of the given files are well formed");
-        System.out.println("Flags:");
+        System.out.println("Returns 0 if all of the given files are well formed");
+        System.out.println("Optional flags:");
         System.out.println("-v: print version");
         System.out.println("-h: print this help");
     }
