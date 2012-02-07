@@ -15,8 +15,8 @@ Below are the basics to build CChecker from sources, once you are in the sources
 
 * To compile the sources: ```configChecker $ mvn compile```
 * To perform the unit tests: ```configChecker $ mvn test```
-* To generate the standalone distribution ```configChecker $ mvn assembly:assembly```
-* To package the jar ```configChecker $ mvn package```
+* To generate the standalone distribution: ```configChecker $ mvn assembly:assembly```
+* To package the jar: ```configChecker $ mvn package```
 
 
 Code organization
