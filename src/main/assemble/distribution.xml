@@ -34,6 +34,10 @@
             <outputDirectory>/</outputDirectory>
         </file>
         <file>
+            <source>LICENSE.txt</source>
+            <outputDirectory>/</outputDirectory>
+        </file>
+        <file>
             <source>src/main/bin/cchecker</source>
             <outputDirectory>/</outputDirectory>
             <fileMode>0755</fileMode>
