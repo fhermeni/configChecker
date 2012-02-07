@@ -13,11 +13,11 @@ Archive description
 
     $ tree .
     .
-    ├── LICENSE.txt -- GPL License
-    ├── README.(html|txt) -- software description and usage
-    ├── README.txt
-    ├── cchecker -- launcher
-    └── jar -- dependencies
+    |-- LICENSE.txt -- GPL License
+    |-- README.(html|txt) -- software description and usage
+    |-- README.txt
+    |-- cchecker -- launcher
+    \__ jar -- dependencies
 
 
 Usage
