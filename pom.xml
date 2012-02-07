@@ -24,7 +24,7 @@
 
     <groupId>btrpcc</groupId>
     <artifactId>configChecker</artifactId>
-    <version>1.0</version>
+    <version>1.0-1-SNAPSHOT</version>
     <description>
         A tool to check whether text based configurations are valid wrt.
         the EBNF proposed in the BtrPlace Constraint Catalog.
