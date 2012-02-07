@@ -1,9 +1,10 @@
 Release notes
 =========================
 
-v1.0 - SNAPSHOT
+v1.0 - 7 fev. 2012
 -------------------------
-- Licensing, documentation
+- License information
+- User Documentation
 
 v0.6 - 4 fev. 2012
 -------------------------
