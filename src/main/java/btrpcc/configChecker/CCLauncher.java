@@ -42,8 +42,8 @@ public class CCLauncher {
         System.out.println("Check the conformance of each of the given files to the configuration EBNF");
         System.out.println("Returns 0 if all of the given files are well formed");
         System.out.println("Optional flags:");
-        System.out.println("-v: print version");
-        System.out.println("-h: print this help");
+        System.out.println("\t" + VERSION_FLAG + ": print version");
+        System.out.println("\t" + HELP_FLAG + ": print this help");
     }
 
     public static void main(String[] args) {

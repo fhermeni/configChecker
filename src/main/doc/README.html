@@ -1,0 +1,68 @@
+<!--
+  ~ Copyright (c) INRIA 2012
+  ~ This file is part of configChecker.
+  ~
+  ~     configChecker is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     ConfigChecker is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with Foobar.  If not, see <http://www.gnu.org/licenses/>
+  -->
+
+<h1>Configuration Checker</h1>
+
+<p>This tools helps at checking for the conformance of configuration
+    with regards to its specification in the BtrPlace constraint catalog.</p>
+
+<p>Version: 1.0
+    author: Fabien Hermenier
+    contact: fabien.hermenier@inria.fr</p>
+
+<h2>Archive description</h2>
+
+<h2>Usage</h2>
+
+<pre><code> Usage: configChecker input_files
+    Check the conformance of each of the given files to the configuration EBNF
+    Returns 0 if all of the given files are well formed
+    Optional flags:
+    -v: print version
+    -h: print this help
+</code></pre>
+
+<h2>Configuration format</h2>
+
+<p>The following EBNF specifies the format of a configuration:</p>
+
+<pre><code>ID : ('a'..'z'|'A'..'Z') ('a'..'z'|'A'..'Z'|'0'..'9')*;
+    ON_ID : ID;
+    OFF_ID : '(' ID ')' ;
+    PAUSED_ID : '!' ID;
+    HOST : ':';
+    ENDL : '\n';
+    WAITINGS : '?';
+
+    configuration : node_decl (ENDL+ node_decl)* (ENDL+ waitings)? ENDL*;
+
+    waitings: WAITINGS HOST ON_ID+;
+
+    node_decl: (elem_off|node_on);
+
+    elem_off: OFF_ID;
+    node_on : ON_ID HOST vm*;
+
+    vm : ON_ID | OFF_ID | PAUSED_ID;
+</code></pre>
+
+<p>In addition, every identifier in a same configuration are supposed to be unique.</p>
+
+<h2>Copyright</h2>
+
+<p>Copyright (c) 2011 INRIA.</p>
